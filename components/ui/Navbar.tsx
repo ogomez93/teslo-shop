@@ -1,4 +1,4 @@
-import NextLink from 'next/link'
+import Link from 'next/link'
 import { SearchOutlined, ShoppingCartOutlined } from '@mui/icons-material'
 import { AppBar, Badge, Box, Button, IconButton, Toolbar, Typography } from '@mui/material'
 
@@ -6,23 +6,23 @@ export const Navbar = () => {
   return (
     <AppBar>
       <Toolbar>
-        <NextLink href='/' style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
+        <Link href='/' style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
           <Typography variant='h6'>Teslo |</Typography>
           <Typography sx={{ ml: 0.5 }}>Shop</Typography>
-        </NextLink>
+        </Link>
 
         <Box flex={1}/>
 
         <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-          <NextLink href='/category/men'>
+          <Link href='/category/men'>
             <Button>Men</Button>
-          </NextLink>
-          <NextLink href='/category/women'>
+          </Link>
+          <Link href='/category/women'>
             <Button>Women</Button>
-          </NextLink>
-          <NextLink href='/category/kids'>
+          </Link>
+          <Link href='/category/kids'>
             <Button>Kids</Button>
-          </NextLink>
+          </Link>
         </Box>
 
         <Box flex={1} />
@@ -31,13 +31,13 @@ export const Navbar = () => {
           <SearchOutlined />
         </IconButton>
 
-        <NextLink href='/cart'>
+        <Link href='/cart'>
           <IconButton>
             <Badge badgeContent={2} color='secondary'>
               <ShoppingCartOutlined />
             </Badge>
           </IconButton>
-        </NextLink>
+        </Link>
 
         <Button>Menu</Button>
       </Toolbar>

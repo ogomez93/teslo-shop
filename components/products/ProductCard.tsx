@@ -1,5 +1,5 @@
 import { FC, useMemo, useState } from 'react'
-import NextLink from 'next/link'
+import Link from 'next/link'
 
 import { Grid, Card, CardActionArea, CardMedia, Box, Typography } from '@mui/material'
 
@@ -24,7 +24,7 @@ export const ProductCard: FC<Props> = ({ product }) => {
   return (
     <Grid item xs={6} sm={4} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <Card>
-        <NextLink href='/products/slug' prefetch={false}>
+        <Link href='/products/slug' prefetch={false}>
           <CardActionArea>
             <CardMedia
               alt={product.title}
@@ -33,7 +33,7 @@ export const ProductCard: FC<Props> = ({ product }) => {
               image={productImage}
             />
           </CardActionArea>
-        </NextLink>
+        </Link>
       </Card>
 
       <Box sx={{ mt: 1 }} className='fadeIn'>
