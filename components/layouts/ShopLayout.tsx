@@ -28,7 +28,7 @@ export const ShopLayout: FC<Props> = ({ children, imageFullUrl, pageDescription,
 
       {/* Sidebar */}
 
-      <main style={{ margin: '80px', maxWidth: '1440px', padding: '0px 30px' }}>
+      <main style={{ margin: '80px 0px', maxWidth: '1440px', padding: '0px 30px' }}>
         { children }
       </main>
 
